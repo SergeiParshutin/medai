@@ -1,0 +1,43 @@
+name: malaria
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Pamatlietas
+  - python=3.10
+  - pip
+
+  # Skaitļošana un datu apstrāde
+  - numpy
+  - pandas
+
+  # Attēlu apstrāde un vizualizācija
+  - pillow
+  - opencv
+  - matplotlib
+
+  # Notebook vide
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+
+  # Noderīgas palīg-bibliotēkas
+  - tqdm
+  - pyyaml
+  - scikit-learn
+
+  # PyTorch ar CUDA 12.1 (NVIDIA GPU)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1  # svarīgi: ņem no 'nvidia' kanāla
+
+  # Streamlit (no conda-forge)
+  - streamlit
+
+  - pip:
+      # Ultralytics YOLO
+      - ultralytics
