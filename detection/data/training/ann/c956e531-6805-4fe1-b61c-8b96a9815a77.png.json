@@ -1,0 +1,1882 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 1200,
+        "width": 1600
+    },
+    "objects": [
+        {
+            "id": 12838882,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.047Z",
+            "updatedAt": "2023-07-01T08:06:14.047Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        162,
+                        398
+                    ],
+                    [
+                        273,
+                        497
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838881,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.047Z",
+            "updatedAt": "2023-07-01T08:06:14.047Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        110,
+                        158
+                    ],
+                    [
+                        217,
+                        262
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838880,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.047Z",
+            "updatedAt": "2023-07-01T08:06:14.047Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1198,
+                        110
+                    ],
+                    [
+                        1312,
+                        214
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838879,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.046Z",
+            "updatedAt": "2023-07-01T08:06:14.046Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        895,
+                        244
+                    ],
+                    [
+                        1014,
+                        361
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838878,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.046Z",
+            "updatedAt": "2023-07-01T08:06:14.046Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        977,
+                        358
+                    ],
+                    [
+                        1065,
+                        453
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838877,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.046Z",
+            "updatedAt": "2023-07-01T08:06:14.046Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1388,
+                        614
+                    ],
+                    [
+                        1513,
+                        727
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838876,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.046Z",
+            "updatedAt": "2023-07-01T08:06:14.046Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1064,
+                        774
+                    ],
+                    [
+                        1175,
+                        888
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838875,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.045Z",
+            "updatedAt": "2023-07-01T08:06:14.045Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        176,
+                        1083
+                    ],
+                    [
+                        292,
+                        1192
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838874,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.045Z",
+            "updatedAt": "2023-07-01T08:06:14.045Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1245,
+                        675
+                    ],
+                    [
+                        1364,
+                        784
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838873,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.045Z",
+            "updatedAt": "2023-07-01T08:06:14.045Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        349,
+                        954
+                    ],
+                    [
+                        473,
+                        1059
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838872,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.044Z",
+            "updatedAt": "2023-07-01T08:06:14.044Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        958,
+                        857
+                    ],
+                    [
+                        1093,
+                        984
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838871,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.043Z",
+            "updatedAt": "2023-07-01T08:06:14.043Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1336,
+                        440
+                    ],
+                    [
+                        1475,
+                        562
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838870,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.043Z",
+            "updatedAt": "2023-07-01T08:06:14.043Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        686,
+                        644
+                    ],
+                    [
+                        809,
+                        774
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838869,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.043Z",
+            "updatedAt": "2023-07-01T08:06:14.043Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        718,
+                        511
+                    ],
+                    [
+                        830,
+                        617
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838868,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.043Z",
+            "updatedAt": "2023-07-01T08:06:14.043Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1200,
+                        929
+                    ],
+                    [
+                        1321,
+                        1042
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838867,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.042Z",
+            "updatedAt": "2023-07-01T08:06:14.042Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        348,
+                        1057
+                    ],
+                    [
+                        476,
+                        1176
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838866,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.042Z",
+            "updatedAt": "2023-07-01T08:06:14.042Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1336,
+                        879
+                    ],
+                    [
+                        1442,
+                        980
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838865,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.042Z",
+            "updatedAt": "2023-07-01T08:06:14.042Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        81,
+                        924
+                    ],
+                    [
+                        208,
+                        1050
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838864,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.042Z",
+            "updatedAt": "2023-07-01T08:06:14.042Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        349,
+                        147
+                    ],
+                    [
+                        453,
+                        238
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838863,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.041Z",
+            "updatedAt": "2023-07-01T08:06:14.041Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1337,
+                        747
+                    ],
+                    [
+                        1462,
+                        861
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838862,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.041Z",
+            "updatedAt": "2023-07-01T08:06:14.041Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        237,
+                        877
+                    ],
+                    [
+                        353,
+                        991
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838861,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.041Z",
+            "updatedAt": "2023-07-01T08:06:14.041Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        748,
+                        276
+                    ],
+                    [
+                        855,
+                        375
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838860,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.041Z",
+            "updatedAt": "2023-07-01T08:06:14.041Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1304,
+                        301
+                    ],
+                    [
+                        1439,
+                        426
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838859,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.040Z",
+            "updatedAt": "2023-07-01T08:06:14.040Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        493,
+                        223
+                    ],
+                    [
+                        589,
+                        314
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838858,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.040Z",
+            "updatedAt": "2023-07-01T08:06:14.040Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1136,
+                        356
+                    ],
+                    [
+                        1239,
+                        467
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838857,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.040Z",
+            "updatedAt": "2023-07-01T08:06:14.040Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        627,
+                        543
+                    ],
+                    [
+                        729,
+                        647
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838856,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.040Z",
+            "updatedAt": "2023-07-01T08:06:14.040Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        870,
+                        364
+                    ],
+                    [
+                        973,
+                        472
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838855,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.039Z",
+            "updatedAt": "2023-07-01T08:06:14.039Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        867,
+                        648
+                    ],
+                    [
+                        976,
+                        750
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838854,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.039Z",
+            "updatedAt": "2023-07-01T08:06:14.039Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1222,
+                        533
+                    ],
+                    [
+                        1317,
+                        630
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838853,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.039Z",
+            "updatedAt": "2023-07-01T08:06:14.039Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        909,
+                        514
+                    ],
+                    [
+                        1019,
+                        617
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838852,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.039Z",
+            "updatedAt": "2023-07-01T08:06:14.039Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        761,
+                        369
+                    ],
+                    [
+                        873,
+                        479
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838851,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.038Z",
+            "updatedAt": "2023-07-01T08:06:14.038Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        474,
+                        706
+                    ],
+                    [
+                        604,
+                        827
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838850,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.038Z",
+            "updatedAt": "2023-07-01T08:06:14.038Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        771,
+                        1077
+                    ],
+                    [
+                        888,
+                        1188
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838849,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.038Z",
+            "updatedAt": "2023-07-01T08:06:14.038Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        820,
+                        141
+                    ],
+                    [
+                        937,
+                        260
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838848,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.038Z",
+            "updatedAt": "2023-07-01T08:06:14.038Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        937,
+                        984
+                    ],
+                    [
+                        1046,
+                        1084
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838847,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.037Z",
+            "updatedAt": "2023-07-01T08:06:14.037Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1244,
+                        226
+                    ],
+                    [
+                        1346,
+                        322
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838846,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.037Z",
+            "updatedAt": "2023-07-01T08:06:14.037Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1392,
+                        1056
+                    ],
+                    [
+                        1501,
+                        1160
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838845,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.037Z",
+            "updatedAt": "2023-07-01T08:06:14.037Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        205,
+                        224
+                    ],
+                    [
+                        306,
+                        337
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838844,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.036Z",
+            "updatedAt": "2023-07-01T08:06:14.036Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1119,
+                        455
+                    ],
+                    [
+                        1241,
+                        563
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838843,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.036Z",
+            "updatedAt": "2023-07-01T08:06:14.036Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        548,
+                        294
+                    ],
+                    [
+                        660,
+                        402
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838842,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.036Z",
+            "updatedAt": "2023-07-01T08:06:14.036Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        122,
+                        807
+                    ],
+                    [
+                        233,
+                        923
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838841,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.035Z",
+            "updatedAt": "2023-07-01T08:06:14.035Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        361,
+                        817
+                    ],
+                    [
+                        478,
+                        925
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838840,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.035Z",
+            "updatedAt": "2023-07-01T08:06:14.035Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1013,
+                        1043
+                    ],
+                    [
+                        1138,
+                        1166
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838839,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.035Z",
+            "updatedAt": "2023-07-01T08:06:14.035Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        811,
+                        480
+                    ],
+                    [
+                        931,
+                        581
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838838,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.035Z",
+            "updatedAt": "2023-07-01T08:06:14.035Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1323,
+                        189
+                    ],
+                    [
+                        1446,
+                        302
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838837,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.034Z",
+            "updatedAt": "2023-07-01T08:06:14.034Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        45,
+                        215
+                    ],
+                    [
+                        135,
+                        310
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838836,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.034Z",
+            "updatedAt": "2023-07-01T08:06:14.034Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        653,
+                        317
+                    ],
+                    [
+                        752,
+                        424
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838835,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.034Z",
+            "updatedAt": "2023-07-01T08:06:14.034Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        207,
+                        594
+                    ],
+                    [
+                        339,
+                        718
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838834,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.034Z",
+            "updatedAt": "2023-07-01T08:06:14.034Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1330,
+                        1030
+                    ],
+                    [
+                        1449,
+                        1142
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838833,
+            "classId": 17896,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.033Z",
+            "updatedAt": "2023-07-01T08:06:14.033Z",
+            "tags": [],
+            "classTitle": "trophozoite",
+            "points": {
+                "exterior": [
+                    [
+                        1108,
+                        583
+                    ],
+                    [
+                        1242,
+                        694
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838832,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.032Z",
+            "updatedAt": "2023-07-01T08:06:14.032Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        41,
+                        1045
+                    ],
+                    [
+                        143,
+                        1151
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838831,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.032Z",
+            "updatedAt": "2023-07-01T08:06:14.032Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1461,
+                        774
+                    ],
+                    [
+                        1579,
+                        874
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838830,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.031Z",
+            "updatedAt": "2023-07-01T08:06:14.031Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1183,
+                        291
+                    ],
+                    [
+                        1287,
+                        390
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838829,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.031Z",
+            "updatedAt": "2023-07-01T08:06:14.031Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1107,
+                        1003
+                    ],
+                    [
+                        1217,
+                        1120
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838828,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.031Z",
+            "updatedAt": "2023-07-01T08:06:14.031Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1385,
+                        953
+                    ],
+                    [
+                        1484,
+                        1053
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838827,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.031Z",
+            "updatedAt": "2023-07-01T08:06:14.031Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1159,
+                        668
+                    ],
+                    [
+                        1257,
+                        765
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838826,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.030Z",
+            "updatedAt": "2023-07-01T08:06:14.030Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1261,
+                        560
+                    ],
+                    [
+                        1383,
+                        669
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838825,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.029Z",
+            "updatedAt": "2023-07-01T08:06:14.029Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        236,
+                        209
+                    ],
+                    [
+                        351,
+                        321
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838824,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.029Z",
+            "updatedAt": "2023-07-01T08:06:14.029Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1482,
+                        940
+                    ],
+                    [
+                        1575,
+                        1029
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838823,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.029Z",
+            "updatedAt": "2023-07-01T08:06:14.029Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        17,
+                        131
+                    ],
+                    [
+                        92,
+                        222
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838822,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.028Z",
+            "updatedAt": "2023-07-01T08:06:14.028Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        1450,
+                        219
+                    ],
+                    [
+                        1566,
+                        318
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838821,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.028Z",
+            "updatedAt": "2023-07-01T08:06:14.028Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        568,
+                        411
+                    ],
+                    [
+                        698,
+                        545
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838820,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.026Z",
+            "updatedAt": "2023-07-01T08:06:14.026Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        617,
+                        0
+                    ],
+                    [
+                        723,
+                        100
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838819,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.026Z",
+            "updatedAt": "2023-07-01T08:06:14.026Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        499,
+                        120
+                    ],
+                    [
+                        625,
+                        215
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838818,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.025Z",
+            "updatedAt": "2023-07-01T08:06:14.025Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        283,
+                        741
+                    ],
+                    [
+                        412,
+                        854
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838817,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.025Z",
+            "updatedAt": "2023-07-01T08:06:14.025Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        446,
+                        485
+                    ],
+                    [
+                        563,
+                        594
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838816,
+            "classId": 17896,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.024Z",
+            "updatedAt": "2023-07-01T08:06:14.024Z",
+            "tags": [],
+            "classTitle": "trophozoite",
+            "points": {
+                "exterior": [
+                    [
+                        1280,
+                        1
+                    ],
+                    [
+                        1419,
+                        119
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838815,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.024Z",
+            "updatedAt": "2023-07-01T08:06:14.024Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        159,
+                        534
+                    ],
+                    [
+                        273,
+                        625
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838814,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.024Z",
+            "updatedAt": "2023-07-01T08:06:14.024Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        546,
+                        478
+                    ],
+                    [
+                        648,
+                        592
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838813,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.023Z",
+            "updatedAt": "2023-07-01T08:06:14.023Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        553,
+                        569
+                    ],
+                    [
+                        666,
+                        679
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838812,
+            "classId": 17896,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.023Z",
+            "updatedAt": "2023-07-01T08:06:14.023Z",
+            "tags": [],
+            "classTitle": "trophozoite",
+            "points": {
+                "exterior": [
+                    [
+                        188,
+                        693
+                    ],
+                    [
+                        340,
+                        811
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838811,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.022Z",
+            "updatedAt": "2023-07-01T08:06:14.022Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        521,
+                        43
+                    ],
+                    [
+                        616,
+                        145
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838810,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.021Z",
+            "updatedAt": "2023-07-01T08:06:14.021Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        458,
+                        666
+                    ],
+                    [
+                        564,
+                        775
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838809,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.021Z",
+            "updatedAt": "2023-07-01T08:06:14.021Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        388,
+                        644
+                    ],
+                    [
+                        503,
+                        743
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838808,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.021Z",
+            "updatedAt": "2023-07-01T08:06:14.021Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        972,
+                        23
+                    ],
+                    [
+                        1090,
+                        122
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838807,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.021Z",
+            "updatedAt": "2023-07-01T08:06:14.021Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        184,
+                        793
+                    ],
+                    [
+                        288,
+                        900
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838806,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.019Z",
+            "updatedAt": "2023-07-01T08:06:14.019Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        18,
+                        956
+                    ],
+                    [
+                        113,
+                        1061
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 12838805,
+            "classId": 17895,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "az@datasetninja.com",
+            "createdAt": "2023-07-01T08:06:14.019Z",
+            "updatedAt": "2023-07-01T08:06:14.019Z",
+            "tags": [],
+            "classTitle": "red blood cell",
+            "points": {
+                "exterior": [
+                    [
+                        943,
+                        84
+                    ],
+                    [
+                        1031,
+                        181
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}
