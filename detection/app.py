@@ -222,7 +222,7 @@ def main():
     st.subheader(f"Ielādētais attēls: {image_name}")
     c1,c2 = st.columns(2)
     with c1:
-        st.image(image, caption="Oriģinālais attēls", use_container_width=True)
+        st.image(image, caption="Oriģinālais attēls", width='stretch')
 
     w, h = image.size
 
@@ -311,7 +311,7 @@ def main():
         st.image(
             combined,
             caption="Sarkanā krāsā – modeļa prognozes, zaļā – ground truth (ja ieslēgts)",
-            use_container_width=True,
+            width='stretch'
         )
 
     with col2:
