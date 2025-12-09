@@ -12,13 +12,14 @@
 #   - ground truth maska (zaļā krāsā, ja pieejama un ja atzīmēts checkbox).
 
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple
 
 import numpy as np
 from PIL import Image
 
 import streamlit as st
 import torch
+import cv2
 import segmentation_models_pytorch as smp
 
 from gland_dataset import create_binary_mask_from_json
@@ -43,7 +44,16 @@ ENCODER_NAME = "resnet34"   # tas pats, ko izmantoji treniņam
 # encoder_weights var būt None, jo mēs ielādējam savus state_dict
 ENCODER_WEIGHTS = None
 
+TARGET_SIZE: Tuple[int, int] = (256, 256)
 
+
+def get_device() -> torch.device:
+    """Izvēlas labāko pieejamo ierīci: CUDA -> MPS -> CPU."""
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+        return torch.device("mps")
+    return torch.device("cpu")
 # === Palīgfunkcijas ===
 
 def overlay_mask(
@@ -54,8 +64,8 @@ def overlay_mask(
 ) -> np.ndarray:
     """
     Uzliek bināru masku virs attēla.
-    image_np: (H,W,3), var būt [0..255] vai [0..1]
-    mask_np: (H,W), 0/1
+    image_np: (H,W,3), [0..255] vai [0..1]
+    mask_np: (H,W), 0/1 vai 0..1
     color: (R,G,B) [0..1]
     alpha: maskas caurspīdīgums
     """
@@ -63,7 +73,13 @@ def overlay_mask(
     if img.max() > 1.0:
         img = img / 255.0
 
-    mask_bool = mask_np.astype(bool)
+    # ja maska nav 0/1, pamaskejam
+    if mask_np.max() > 1.0:
+        m = (mask_np > 0).astype(bool)
+    else:
+        m = (mask_np > 0.5).astype(bool)
+
+    mask_bool = m.astype(bool)
 
     overlay = img.copy()
     col = np.zeros_like(overlay)
@@ -79,14 +95,13 @@ def overlay_mask(
 
 
 def load_image_from_path(path: Path) -> Image.Image:
-    img = Image.open(path).convert("RGB")
-    return img
+    return Image.open(path).convert("RGB")
 
 
 def get_ann_path_for_image(image_name: str, split: str) -> Optional[Path]:
     """
     Atrod anotācijas ceļu priekš attēla:
-      image_name: piem., "12345.bmp"
+      image_name: piem., "train_60.bmp"
       split: "training" vai "test"
     Atgriež Path vai None, ja anotācija nav atrasta.
     """
@@ -104,7 +119,7 @@ def get_ann_path_for_image(image_name: str, split: str) -> Optional[Path]:
 @st.cache_resource
 def load_model(model_type: str, encoder_type: str):
     """
-    Ielādē U-Net vai FPN modeli ar saglabātajiem svariem.
+    Ielādē U-Net, FPN vai DeepLab modeli ar saglabātajiem svariem.
     Modeli kešojam, lai nebūtu jāielādē atkārtoti.
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -147,15 +162,29 @@ def load_model(model_type: str, encoder_type: str):
 
 def predict_mask(model, device, image: Image.Image) -> np.ndarray:
     """
-    Izlaiž attēlu caur modeli un atgriež maskas varbūtības karti (H,W) [0..1].
+    Izlaiž attēlu caur modeli un atgriež maskas varbūtības karti
+    oriģinālajā izmērā: (H_orig, W_orig), vērtības [0..1].
     """
-    img_np = np.array(image, dtype=np.float32) / 255.0
-    # (H,W,3) -> (1,3,H,W)
-    img_t = torch.from_numpy(img_np).permute(2, 0, 1).unsqueeze(0).to(device)
+    # oriģinālais izmērs
+    img_np = np.array(image, dtype=np.float32)  # (H,W,3)
+    H, W, _ = img_np.shape
+
+    # normalizācija
+    img_norm = img_np / 255.0
+
+    # resize uz treniņa izmēru (TARGET_SIZE)
+    th, tw = TARGET_SIZE
+    img_resized = cv2.resize(img_norm, (tw, th), interpolation=cv2.INTER_LINEAR)  # (th, tw, 3)
+
+    # uz tensoru
+    img_t = torch.tensor(img_resized, dtype=torch.float32).permute(2, 0, 1).unsqueeze(0).to(device)
 
     with torch.no_grad():
         logits = model(img_t)
-        probs = torch.sigmoid(logits)[0, 0].cpu().numpy()  # (H,W)
+        probs_small = torch.sigmoid(logits)[0, 0].cpu().numpy()  # (th, tw)
+
+    # upscale atpakaļ uz oriģinālo izmēru
+    probs = cv2.resize(probs_small, (W, H), interpolation=cv2.INTER_LINEAR)  # (H,W)
 
     return probs
 
@@ -164,18 +193,18 @@ def predict_mask(model, device, image: Image.Image) -> np.ndarray:
 
 def main():
     st.set_page_config(
-        page_title="Glandu segmentācija ar U-Net / FPN",
+        page_title="Glandu segmentācija ar U-Net / FPN / DeepLab",
         layout="wide",
     )
 
-    st.title("Glandu segmentācijas demo ar U-Net / FPN")
+    st.title("Glandu segmentācijas demo ar U-Net / FPN / DeepLab")
 
     st.markdown(
         """
-        Šī lietotne izmanto **piemācītus segmentācijas modeļus** (`U-Net` un `FPN`),
+        Šī lietotne izmanto **piemācītus segmentācijas modeļus** (`U-Net`, `FPN` un `DeepLab`),
         lai segmentētu glandas histoloģijas attēlos.
 
-        - Izvēlies modeli (U-Net / FPN),
+        - Izvēlies modeli (U-Net / FPN / DeepLab),
         - izvēlies attēlu no datu kopas (test) vai augšupielādē savu,
         - maini **threshold slideri** un vēro, kā mainās maska,
         - pēc izvēles ieslēdz/izslēdz **ground truth** masku (ja tā ir pieejama).
@@ -187,7 +216,7 @@ def main():
 
     model_type = st.sidebar.radio(
         "Modelis",
-        options=["U-Net", "FPN", "DevLabV3"],
+        options=["U-Net", "FPN", "DeepLabV3"],
         help="Modeļi izmanto to pašu datu formātu – viegli salīdzināmi.",
     )
 
@@ -263,8 +292,10 @@ def main():
         return
 
     # --- Oriģinālais attēls ---
+    c1,c2 = st.columns(2)
     st.subheader(f"Ielādētais attēls: {image_name}")
-    st.image(image, caption="Oriģinālais attēls", use_column_width=True)
+    with c1:
+        st.image(image, caption="Oriģinālais attēls", width='stretch')
 
     img_np = np.array(image)
     H, W, _ = img_np.shape
@@ -308,14 +339,14 @@ def main():
         st.image(
             pred_mask * 255,
             caption=f"Threshold = {threshold:.2f}",
-            use_column_width=True,
-            clamp=True,
+            width='stretch',
+            clamp=True
         )
 
     with col2:
         if has_gt and show_gt and gt_overlay is not None:
             st.markdown("**Ground truth maska (zaļš pārklājums)**")
-            st.image(gt_overlay, use_column_width=True)
+            st.image(gt_overlay, width='stretch')
         else:
             st.markdown("**Ground truth maska nav parādīta**")
             if not has_gt:
@@ -326,7 +357,7 @@ def main():
         st.image(
             combined,
             caption="Sarkanā – prognoze, zaļā – ground truth (ja ieslēgts)",
-            use_column_width=True,
+            width='stretch'
         )
 
     # --- Vienkārša statistika ---

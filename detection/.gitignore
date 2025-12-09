@@ -2,3 +2,4 @@ data/malaria_yolo
 runs
 malaria.yaml
 yolo*.pt
+*pycache*

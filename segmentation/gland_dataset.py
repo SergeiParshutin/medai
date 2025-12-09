@@ -1,43 +1,12 @@
 # gland_dataset.py
-"""
-Glandu segmentācijas datu kopas modulis.
-
-Pieņem datu struktūru:
-
-data/
-  gland_seg/
-    training/
-      img/*.bmp
-      ann/*.bmp.json
-    test/
-      img/*.bmp
-      ann/*.bmp.json
-
-Katram attēlam "12345.bmp" anotācijas datne ir:
-  "ann/12345.bmp.json"
-
-JSON formāts (Supervisely tipa):
-{
-  "size": {"width": W, "height": H},
-  "objects": [
-    {
-      "classTitle": "...",
-      "points": {
-        "exterior": [[x1, y1], [x2, y2], ..., [xn, yn]]
-      }
-    },
-    ...
-  ]
-}
-
-No poligoniem tiek izveidota bināra maska:
-  1 = glands, 0 = fons.
-"""
 
 from pathlib import Path
 from typing import List, Tuple, Optional
 
 import json
+import base64
+import zlib
+from io import BytesIO
 
 import numpy as np
 from PIL import Image
@@ -46,78 +15,99 @@ import cv2
 import torch
 from torch.utils.data import Dataset
 
+
 def create_binary_mask_from_json(json_path: Path) -> np.ndarray:
-        """
-        No anotācijas JSON (Supervisely tipa poligoni) izveido bināru masku.
-        Rezultāts: maska ar izmēru (H, W), kur 1 = glands, 0 = fons.
+    """
+    No Supervisely bitmap anotācijām izveido bināru masku.
+    Rezultāts: maska (H, W), kur 1 = glands, 0 = fons.
+    """
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
 
-        Parametri:
-        json_path: ceļš uz *.bmp.json anotācijas datni.
-        """
-        with open(json_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
+    h = data["size"]["height"]
+    w = data["size"]["width"]
 
-        h = data["size"]["height"]
-        w = data["size"]["width"]
+    mask = np.zeros((h, w), dtype=np.uint8)
 
-        # 0 = fons, 1 = glands
-        mask = np.zeros((h, w), dtype=np.uint8)
+    for obj in data.get("objects", []):
+        if obj.get("geometryType") != "bitmap":
+            continue
 
-        for obj in data.get("objects", []):
-            # Ja grib filtru pēc konkrētām klasēm:
-            # if obj["classTitle"] not in ["gland", "benign", "malignant"]:
-            #     continue
+        bm = obj.get("bitmap")
+        if not bm:
+            continue
 
-            points = obj["points"]["exterior"]  # saraksts ar [x, y] punktiem
-            if len(points) < 3:
-                # poligons ar < 3 punktiem nav derīgs
-                continue
+        data_b64 = bm.get("data")
+        origin = bm.get("origin", [0, 0])
+        if not data_b64:
+            continue
 
-            # OpenCV fillPoly sagaida int32 masīvu formā (N, 1, 2)
-            pts = np.array(points, dtype=np.int32).reshape((-1, 1, 2))
-            cv2.fillPoly(mask, [pts], 1)
+        x0, y0 = origin
 
-        return mask
+        # base64 -> zlib -> PNG
+        compressed = base64.b64decode(data_b64)
+        png_bytes = zlib.decompress(compressed)
+
+        img = Image.open(BytesIO(png_bytes))
+        arr = np.array(img)
+
+        if arr.ndim == 3:
+            arr = arr[..., 0]
+
+        bmp_mask = (arr > 0).astype(np.uint8)
+        h_mask, w_mask = bmp_mask.shape
+
+        x1 = min(w, x0 + w_mask)
+        y1 = min(h, y0 + h_mask)
+        mw = x1 - x0
+        mh = y1 - y0
+        if mw <= 0 or mh <= 0:
+            continue
+
+        mask[y0:y1, x0:x1] = np.maximum(
+            mask[y0:y1, x0:x1],
+            bmp_mask[0:mh, 0:mw],
+        )
+
+    return mask
+
 
 class GlandSegmentationDataset(Dataset):
     """
     PyTorch Dataset glandu segmentācijai.
 
-    Pieņem datu struktūru:
+    root/
+      training/
+        img/*.bmp
+        ann/*.bmp.json
+      test/
+        img/*.bmp
+        ann/*.bmp.json
 
-      root/
-        training/
-          img/*.bmp
-          ann/*.bmp.json
-        test/
-          img/*.bmp
-          ann/*.bmp.json
-
-    Parametri:
-      root_dir: saknes mape (piem., Path("data/gland_seg"))
-      split: "training" vai "test"
-      transform: papildu transformācijas (piem., Albumentations), kas saņem
-                 image (H,W,3) un mask (H,W) un atgriež tos pašos laukus.
+    target_size: (H, W) – uz kādu izmēru pārizmērot visus attēlus un maskas.
     """
 
-    def __init__(self, root_dir: Path, split: str = "training", transform: Optional = None):
+    def __init__(
+        self,
+        root_dir: Path,
+        split: str = "training",
+        transform: Optional[object] = None,
+        target_size: Optional[Tuple[int, int]] = (256, 256),
+    ):
         assert split in ["training", "test"], "split jābūt 'training' vai 'test'"
         self.root_dir = Path(root_dir)
         self.split = split
         self.transform = transform
+        self.target_size = target_size
 
         img_dir = self.root_dir / split / "img"
         ann_dir = self.root_dir / split / "ann"
 
         self.samples: List[Tuple[Path, Path]] = []
 
-        # Meklējam visus BMP attēlus un tiem atbilstošās *.bmp.json anotācijas
         for img_path in sorted(img_dir.glob("*.bmp")):
-            # "12345.bmp" -> "12345.bmp.json"
             ann_path = ann_dir / f"{img_path.name}.json"
             if not ann_path.exists():
-                # ja nav anotācijas, izlaižam (var arī izdrukāt brīdinājumu)
-                # print(f"[BRĪDINĀJUMS] Trūkst anotācijas priekš {img_path.name}")
                 continue
             self.samples.append((img_path, ann_path))
 
@@ -128,62 +118,32 @@ class GlandSegmentationDataset(Dataset):
 
     def __len__(self) -> int:
         return len(self.samples)
-    
-    def _create_binary_mask_from_json(self, json_path: Path) -> np.ndarray:
-        """
-        No anotācijas JSON (Supervisely tipa poligoni) izveido bināru masku.
-        Rezultāts: maska ar izmēru (H, W), kur 1 = glands, 0 = fons.
-
-        Parametri:
-        json_path: ceļš uz *.bmp.json anotācijas datni.
-        """
-        with open(json_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        h = data["size"]["height"]
-        w = data["size"]["width"]
-
-        # 0 = fons, 1 = glands
-        mask = np.zeros((h, w), dtype=np.uint8)
-
-        for obj in data.get("objects", []):
-            # Ja grib filtru pēc konkrētām klasēm:
-            # if obj["classTitle"] not in ["gland", "benign", "malignant"]:
-            #     continue
-
-            points = obj["points"]["exterior"]  # saraksts ar [x, y] punktiem
-            if len(points) < 3:
-                # poligons ar < 3 punktiem nav derīgs
-                continue
-
-            # OpenCV fillPoly sagaida int32 masīvu formā (N, 1, 2)
-            pts = np.array(points, dtype=np.int32).reshape((-1, 1, 2))
-            cv2.fillPoly(mask, [pts], 1)
-
-        return mask
 
     def __getitem__(self, idx: int):
         img_path, ann_path = self.samples[idx]
 
-        # 1) Ielādējam attēlu (BMP -> RGB)
+        # 1) attēls
         img = Image.open(img_path).convert("RGB")
-        img_np = np.array(img, dtype=np.float32) / 255.0  # [0,1], (H, W, 3)
+        img_np = np.array(img, dtype=np.float32) / 255.0  # (H,W,3)
 
-        # 2) Iegūstam masku no anotācijas
-        mask_np = self._create_binary_mask_from_json(ann_path).astype(np.float32)  # (H, W)
+        # 2) maska
+        mask_np = create_binary_mask_from_json(ann_path).astype(np.float32)  # (H,W)
 
-        # 3) Ja definēta transformācija (augmentācija), pielietojam
+        # 3) pārizmērošana uz fiksētu izmēru (H_target, W_target)
+        if self.target_size is not None:
+            th, tw = self.target_size
+            # cv2.resize izmanto (W, H)
+            img_np = cv2.resize(img_np, (tw, th), interpolation=cv2.INTER_LINEAR)
+            mask_np = cv2.resize(mask_np, (tw, th), interpolation=cv2.INTER_NEAREST)
+
+        # 4) transformācijas (ja lieto Albumentations u.c.)
         if self.transform is not None:
-            # Piemēram, Albumentations transformācijas sagaida argumentus "image" un "mask"
             transformed = self.transform(image=img_np, mask=mask_np)
             img_np = transformed["image"]
             mask_np = transformed["mask"]
 
-        # 4) Konvertējam uz PyTorch tenzoriem formā (C, H, W)
-        img_tensor = torch.from_numpy(img_np).permute(2, 0, 1)  # (3, H, W)
-        mask_tensor = torch.from_numpy(mask_np).unsqueeze(0)    # (1, H, W)
+        # 5) uz tenzoriem – izmantojam torch.tensor, lai būtu normāls storage
+        img_tensor = torch.tensor(img_np, dtype=torch.float32).permute(2, 0, 1).contiguous()
+        mask_tensor = torch.tensor(mask_np, dtype=torch.float32).unsqueeze(0).contiguous()
 
-        # Atgriežam arī faila nosaukumu (noderīgs debugam / vizualizācijai)
         return img_tensor, mask_tensor, img_path.name
-    
-    
