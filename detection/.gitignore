@@ -3,3 +3,4 @@ runs
 malaria.yaml
 yolo*.pt
 *pycache*
+.DS_Store
