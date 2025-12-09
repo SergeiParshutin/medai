@@ -1,0 +1,45 @@
+name: segmentation
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Pamatlietas
+  - python=3.10
+  - pip
+
+  # Skaitļošana un datu apstrāde
+  - numpy
+  - pandas
+
+  # Attēlu apstrāde un vizualizācija
+  - pillow
+  - opencv
+  - matplotlib
+
+  # Notebook vide
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+
+  # Palīgbibliotēkas
+  - tqdm
+  - pyyaml
+  - scikit-learn
+
+  # PyTorch ar CUDA 12.1 (NVIDIA GPU)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+
+  # Streamlit
+  - streamlit
+
+  - pip:
+      # Segmentācijas modeļi
+      - segmentation-models-pytorch==0.3.3
+      # Backbone encodera bibliotēka
+      - timm
