@@ -1,3 +1,4 @@
-./data/malaria_yolo
-./runs
+data/malaria_yolo
+runs
 malaria.yaml
+yolo*.pt

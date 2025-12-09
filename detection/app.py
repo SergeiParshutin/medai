@@ -99,7 +99,7 @@ def draw_boxes(
     draw = ImageDraw.Draw(img)
 
     for i, (x1, y1, x2, y2) in enumerate(boxes_xyxy):
-        draw.rectangle([x1, y1, x2, y2], outline=color, width=2)
+        draw.rectangle([x1, y1, x2, y2], outline=color, width=8)
         if labels is not None and i < len(labels):
             # Tekstu zīmējam nedaudz virs kastes
             text = labels[i]
@@ -205,7 +205,7 @@ def main():
             image = Image.open(uploaded_file).convert("RGB")
     else:
         # Vienkāršs selectbox no validācijas attēliem
-        val_images = sorted([p.name for p in IMAGES_VAL.glob("*.png")])
+        val_images = sorted([p.name for p in IMAGES_VAL.glob("*.jpg")])
         if not val_images:
             st.sidebar.warning(f"Mapē {IMAGES_VAL} nav atrasti attēli.")
         else:
@@ -220,7 +220,9 @@ def main():
         return
 
     st.subheader(f"Ielādētais attēls: {image_name}")
-    st.image(image, caption="Oriģinālais attēls", use_column_width=True)
+    c1,c2 = st.columns(2)
+    with c1:
+        st.image(image, caption="Oriģinālais attēls", use_container_width=True)
 
     w, h = image.size
 
@@ -309,7 +311,7 @@ def main():
         st.image(
             combined,
             caption="Sarkanā krāsā – modeļa prognozes, zaļā – ground truth (ja ieslēgts)",
-            use_column_width=True,
+            use_container_width=True,
         )
 
     with col2:
@@ -327,15 +329,6 @@ def main():
         if pred_boxes_xyxy:
             st.write("Prognozētās klases (kopā):")
             st.write(", ".join(sorted(set(lbl.split()[1] for lbl in pred_labels))))
-
-        st.markdown(
-            """
-            **Ierosinājumi diskusijai ar skolēniem:**
-            - Vai modelis atrod visus ground truth objektus?
-            - Vai ir kādi “false positives” (prognozes, kur objekta patiesībā nav)?
-            - Kā confidence sliekšņa maiņa ietekmē rezultātu – vai vairāk/mazāk objekti, kas ir pareizi?
-            """
-        )
 
 
 if __name__ == "__main__":
