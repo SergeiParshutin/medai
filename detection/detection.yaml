@@ -38,4 +38,4 @@ dependencies:
   - pip:
       # Ultralytics YOLO
       - ultralytics
-      - streamlit==1.5
+      - streamlit

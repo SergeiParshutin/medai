@@ -37,7 +37,7 @@ dependencies:
 
   - pip:
       # Segmentācijas modeļi
-      - segmentation-models-pytorch==0.5
+      - segmentation-models-pytorch
       # Backbone encodera bibliotēka
       - timm
-      - streamlit==1.5
+      - streamlit
