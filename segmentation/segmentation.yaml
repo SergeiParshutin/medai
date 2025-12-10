@@ -35,11 +35,9 @@ dependencies:
   - torchaudio
   - pytorch-cuda=12.1
 
-  # Streamlit
-  - streamlit
-
   - pip:
       # Segmentācijas modeļi
-      - segmentation-models-pytorch==0.3.3
+      - segmentation-models-pytorch==0.5
       # Backbone encodera bibliotēka
       - timm
+      - streamlit==1.5

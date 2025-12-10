@@ -35,9 +35,7 @@ dependencies:
   - torchaudio
   - pytorch-cuda=12.1  # svarīgi: ņem no 'nvidia' kanāla
 
-  # Streamlit (no conda-forge)
-  - streamlit
-
   - pip:
       # Ultralytics YOLO
       - ultralytics
+      - streamlit==1.5
